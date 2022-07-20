@@ -1,0 +1,17 @@
+{
+    "name": "breno/app_carrinho_compras",
+    "description": "Hands on individual development program code",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Breno\\AppCarrinhoCompras\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Breno Rodrigues",
+            "email": "brenorm@gmail.com"
+        }
+    ],
+    "require": {}
+}
