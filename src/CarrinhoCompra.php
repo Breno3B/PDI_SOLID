@@ -37,4 +37,30 @@ class CarrinhoCompra
     {
         return $this->valorTotal;
     }
+
+    public function exibirStatus(): string
+    {
+        return $this->status;
+    }
+
+    public function confirmarPedido()
+    {
+        if ($this->validarCarrinho()) {
+            $this->status = 'confirmado';
+            $this->enviarEmailConfirmacao();
+
+            return true;
+        }
+        return false;
+    }
+
+    public function enviarEmailConfirmacao()
+    {
+        echo '<br>... envia email de confirmação ...<br>';
+    }
+
+    public function validarCarrinho()
+    {
+        return count($this->itens) > 0;
+    }
 }
